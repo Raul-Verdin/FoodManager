@@ -1,0 +1,13 @@
+Prompt para continuar desarrollando el sistema de roles y vistas en PHP:
+
+"Estoy desarrollando un sistema de gestión para un restaurante con dos tipos de usuarios: manager y empleado. Ambos usuarios pueden iniciar sesión, pero el manager tiene acceso a funcionalidades adicionales. Quiero que:
+
+El manager pueda acceder a todas las vistas del empleado, pero el empleado no pueda acceder a las vistas del manager.
+
+Implementar control de acceso usando sesiones para validar roles y redirigir a login si no están autorizados.
+
+Mostrar/ocultar contenido dentro de las mismas páginas según el rol del usuario.
+
+Quiero también mejorar la interfaz con un menú de navegación dinámico que muestre opciones según el rol.
+
+Por favor, ayúdame a implementar esta lógica de roles y control de acceso de forma segura y organizada, y cómo estructurar las vistas y archivos PHP para mantener el código limpio y reutilizable."
