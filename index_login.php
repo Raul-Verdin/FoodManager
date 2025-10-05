@@ -23,9 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Redireccionar según rol
             if ($usuario_data['rol'] == 'manager') {
-                header("Location: ViewManage/dashboard.php");
+                header("Location: views/dashboard.php");
             } else {
-                header("Location: ViewEmp/dashboard.php");
+                header("Location: views/dashboard.php");
             }
             exit();
         } else {
