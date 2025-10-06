@@ -4,7 +4,7 @@ requireLogin(); // Solo pedimos que esté logueado
 include('../includes/header.php');
 ?>
 
-<h1>Gestión de Pedidos</h1>
+<h1>Registrar Pedidos</h1>
 
 <!-- Aquí puede interactuar tanto empleados como managers -->
 <form action="procesar_pedido.php" method="post">

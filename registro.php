@@ -29,4 +29,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </select><br>
     <input type="submit" value="Registrar">
 </form>
-<button onclick="window.location.href='index_login.php';">Iniciar Sesion</button>
+<button onclick="window.location.href='index.php';">Iniciar Sesion</button>

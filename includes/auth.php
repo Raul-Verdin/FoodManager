@@ -3,7 +3,7 @@ session_start();
 
 function requireLogin() {
     if (!isset($_SESSION['usuario'])) {
-        header("Location: ../index_login.php");
+        header("Location: ../index.php");
         exit;
     }
 }
