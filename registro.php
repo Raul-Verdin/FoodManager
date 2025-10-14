@@ -1,5 +1,7 @@
 <?php
 include("BD/conexion.php");
+$error = "";
+$success = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
@@ -11,22 +13,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sss", $usuario, $contrasena, $rol);
 
     if ($stmt->execute()) {
-        echo "Usuario registrado correctamente";
+        $success = "Usuario registrado correctamente. <a href='index.php'>Iniciar sesión</a>";
     } else {
-        echo "Error: " . $stmt->error;
+        $error = "Error: " . $stmt->error;
     }
 }
 ?>
 
-<!-- HTML simple para registrar -->
-<form method="post">
-    Usuario: <input type="text" name="usuario" required><br>
-    Contraseña: <input type="password" name="contrasena" required><br>
-    Rol:
-    <select name="rol">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro - FoodManager</title>
+  <link rel="stylesheet" href="style/auth.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Registro</h2>
+
+    <?php if ($error): ?>
+      <div class="error"><?= htmlspecialchars($error) ?></div>
+    <?php elseif ($success): ?>
+      <div class="success" style="color: #4CAF50; text-align: center;"><?= $success ?></div>
+    <?php endif; ?>
+
+    <form method="post">
+      <input type="text" name="usuario" placeholder="Usuario" required>
+      <input type="password" name="contrasena" placeholder="Contraseña" required>
+      <select name="rol" required>
         <option value="manager">Manager</option>
         <option value="empleado">Empleado</option>
-    </select><br>
-    <input type="submit" value="Registrar">
-</form>
-<button onclick="window.location.href='index.php';">Iniciar Sesion</button>
+      </select>
+      <input type="submit" value="Registrar">
+    </form>
+
+    <div class="switch-link">
+      ¿Ya tienes cuenta? <a href="index.php">Iniciar Sesión</a>
+    </div>
+  </div>
+</body>
+</html>

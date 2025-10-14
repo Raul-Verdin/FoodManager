@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost"; 
 $username = "root"; 
-$password = "12345678";
+$password = "mysql123";
 $dbname = "foodmanager"; 
 
 // Crear conexión

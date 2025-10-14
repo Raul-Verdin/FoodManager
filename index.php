@@ -24,13 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($contrasena, $usuario_data['contrasena'])) {
             $_SESSION['usuario'] = $usuario_data['nombre_usuario'];
             $_SESSION['rol'] = $usuario_data['rol'];
-
-            // Redireccionar según rol
-            if ($usuario_data['rol'] == 'manager') {
-                header("Location: views/dashboard.php");
-            } else {
-                header("Location: views/dashboard.php");
-            }
+            header("Location: views/dashboard.php");
             exit();
         } else {
             $error = "Contraseña incorrecta.";
@@ -44,25 +38,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <title>Login - FoodManager</title>
+  <meta charset="UTF-8" />
+  <title>Login - FoodManager</title>
+  <link rel="stylesheet" href="style/auth.css" />
 </head>
 <body>
+  <div class="auth-container">
+    <h2>Iniciar Sesión</h2>
 
-<h2>Iniciar Sesión</h2>
+    <?php if ($error): ?>
+      <div class="error"><?= htmlspecialchars($error) ?></div>
+    <?php endif; ?>
 
-<?php
-if ($error != "") {
-    echo "<p style='color:red;'>$error</p>";
-}
-?>
+    <form method="post">
+      <input type="text" name="usuario" placeholder="Usuario" required>
+      <input type="password" name="contrasena" placeholder="Contraseña" required>
+      <input type="submit" value="Iniciar Sesión">
+    </form>
 
-<form method="post" action="">
-    Usuario: <input type="text" name="usuario" required><br><br>
-    Contraseña: <input type="password" name="contrasena" required><br><br>
-    <input type="submit" value="Iniciar Sesión">
-</form>
-<button onclick="window.location.href='registro.php';">Registrarse</button>
-
+    <div class="switch-link">
+      ¿No tienes cuenta? <a href="registro.php">Registrarse</a>
+    </div>
+  </div>
 </body>
 </html>
