@@ -1,0 +1,102 @@
+/* Contenedor scrollable para la tabla */
+.table-scroll-container {
+  max-height: 70vh;
+  overflow-y: auto;
+  overflow-x: auto; 
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+/* Estilo base para la tabla */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* evita que se compacte demasiado */
+}
+
+.data-table th, .data-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+  color: #333;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Zebra striping para mejor legibilidad */
+.data-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Estilos de color que ya tenías */
+.log-table .log-access { color: #007bff; }
+.log-table .log-create,
+.log-table .log-update,
+.log-table .log-generate { color: #28a745; }
+.log-table .log-delete,
+.log-table .log-denied { color: #dc3545; font-weight: bold; }
+.log-table .log-action { text-transform: uppercase; }
+
+/* Nuevos estilos */
+.table-scroll-container {
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    vertical-align: top;
+}
+
+.data-table th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    color: #333;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* === RESPONSIVIDAD MEJORADA === */
+@media screen and (max-width: 768px) {
+  .table-scroll-container {
+    padding: 5px;
+  }
+
+  .data-table th, .data-table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .data-table {
+    font-size: 13px;
+    min-width: 100%;
+  }
+}

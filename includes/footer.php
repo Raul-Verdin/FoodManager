@@ -1,4 +1,9 @@
-</div> <!-- Cierra main-content -->
-<script src="../script/script.js"></script>
+        </div>
+    </main>
+</div>
+
+<script src="../script/sidebar.js"></script> 
+<script src="../script/main.js"></script> 
+
 </body>
 </html>

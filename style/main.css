@@ -1,0 +1,97 @@
+/* === RESET === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  height: 100%;
+}
+
+/* === TIPOGRAFÍA GENERAL === */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: #222;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* === BOTONES GENÉRICOS === */
+button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* === INPUTS GENÉRICOS === */
+input, select, textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* === ENLACES === */
+a {
+  
+  text-decoration: none
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/*Pop over para la informacion del usuario*/
+.user-menu {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.user-icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.user-popup {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    background: white;
+    padding: 12px;
+    border-radius: 6px;
+    width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.user-popup a {
+    display: block;
+    padding: 6px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+.user-popup a:hover {
+    color: #007bff;
+}
+
+.user-popup hr {
+    margin: 8px 0;
+}

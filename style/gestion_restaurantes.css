@@ -1,0 +1,118 @@
+/* === FORMULARIO CRUD GENERAL === */
+.form-crud {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  max-width: 600px;
+}
+
+.form-crud label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 15px;
+}
+
+.form-crud input[type="text"],
+.form-crud select,
+.form-crud textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-crud textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Botones dentro del formulario */
+.form-crud .btn {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+/* === TABLA === */
+.table-scroll-container {
+  overflow-x: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.data-table th, .data-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* === Botones dentro de la tabla === */
+.data-table .btn {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+/* === Responsivo === */
+@media screen and (max-width: 768px) {
+  .form-crud {
+    padding: 15px;
+  }
+
+  .form-crud label {
+    margin-top: 12px;
+  }
+
+  .form-crud input,
+  .form-crud select,
+  .form-crud textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .data-table {
+    font-size: 13px;
+  }
+
+  .data-table th, .data-table td {
+    padding: 8px;
+  }
+
+  .data-table .btn {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+/* Contenedor colapsable del formulario */
+.form-toggle-container {
+  display: none;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.form-toggle-container.show {
+  display: block;
+}

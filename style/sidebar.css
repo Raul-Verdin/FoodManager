@@ -1,0 +1,141 @@
+/* === RESET BÁSICO === */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === CONTENEDORES PRINCIPALES === */
+#wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+#sidebar {
+  width: 250px;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+#content {
+  margin-left: 250px;
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* === SIDEBAR HEADER === */
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-header h3 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.sidebar-header .user-info {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.sidebar-header .user-info small {
+  display: block;
+  font-size: 12px;
+  color: #888;
+}
+
+/* === MENÚ DE LA SIDEBAR === */
+.sidebar-menu ul li {
+  margin: 10px 0;
+}
+
+.sidebar-menu ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #ccc;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-menu ul li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.menu-heading {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* === ENCABEZADO PRINCIPAL === */
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-right a {
+  color: #333;
+  font-weight: bold;
+}
+
+.current-res-name {
+  font-weight: bold;
+  color: #444;
+}
+
+/* === CONTENIDO DE LA PÁGINA === */
+.page-content {
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: calc(100vh - 60px);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  #sidebar {
+    transform: translateX(-100%);
+  }
+
+  #sidebar.active {
+    transform: translateX(0);
+  }
+
+  #content {
+    margin-left: 0;
+  }
+
+  #content.shift {
+    margin-left: 250px;
+  }
+}
